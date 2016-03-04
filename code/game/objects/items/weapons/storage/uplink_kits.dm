@@ -197,6 +197,17 @@
 	return
 
 
+/obj/item/weapon/storage/box/syndie_kit/imp_mind_slave
+	name = "Mindslave Implant (with injector)"
+
+/obj/item/weapon/storage/box/syndie_kit/imp_mind_slave/New()
+	var/obj/item/weapon/implanter/O = new(src)
+	O.imp = new /obj/item/weapon/implant/mind_slave(O)
+	O.update_icon()
+	..()
+	return
+
+
 /obj/item/weapon/storage/box/syndie_kit/space
 	name = "boxed space suit and helmet"
 	can_hold = list(/obj/item/clothing/suit/space/syndicate, /obj/item/clothing/head/helmet/space/syndicate)
